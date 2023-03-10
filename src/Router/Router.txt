@@ -1,6 +1,7 @@
 - Thư viện: react-router-dom
     + npm install react-router-dom
     + yarn add react-router-dom
+ - Link trang chủ của thư viện: https://reactrouter.com/en/main
 - Công dụng: Định tuyến
 - Cú pháp:
     + createBrowserRouter([
