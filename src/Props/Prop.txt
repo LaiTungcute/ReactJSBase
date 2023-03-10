@@ -1,0 +1,29 @@
+1. Props
+- Ứng dụng: Để truyền dữ liệu từ cha cho con
+- Cú pháp
+    + Component cha: <Propss propA= {propA} propB ={propB}/>
+    + Component con: 
+       C1: function Propss(props) {
+            const {propsA, propsB} = props;
+            return...
+           }
+       C2: function Propss({propA, propB}) {
+            return...
+           } 
+
+2. Children
+- Ứng dụng: Để truyền dữ liệu vào content
+- Cú pháp:
+    + Component cha: <Propss>Hello. My nickname is Mina</Propss>
+    + Component con: 
+       C1: function Propss(props) {
+            const {children} = props;
+            return (
+                <div>{children}</div>
+            )
+           }
+       C2: function Propss({children}) {
+            return (
+                <div>{children}</div>
+            )   
+           }  

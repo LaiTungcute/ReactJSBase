@@ -1,0 +1,36 @@
+- Ứng dụng: Lưu trữ dữ liệu và di chuyển các value tới các component khác nhau mà ko cần thông qua props
+- Cú pháp
+    + Tạo 1 context: const myContext = React.createContext();
+    + Tạo 1 provider lưu trữ dữ liệu và giới hạn các component được truy cập dữ liệu: (Tạo 1 component)
+        class MyProvider extends React.component {
+            contructor(props) {
+                super(props)
+                this.state = {
+                    a: ...,
+                    b: ...,
+                    c: ...
+                }
+            }
+            ...
+            render(
+                return (
+                    <myContext.Provider value={{
+                        a: this.a,
+                        b: this.b,
+                        c: this.c}}>
+                        {this.props.children}
+                    </myContext.Provider>
+                )
+            )
+        }
+    + Truyền dữ liệu và component con
+        <myContext.Customer>
+            {(value) => ...}
+        </myContext.Customer> 
+    + render dữ liệu của component con:
+        <MyProvider>
+            /*Component con*/
+        </MyProvider>
+
+- Note: Các component là con của component được bọc bởi MyProvider thì sẽ truy cập được,
+còn component cấp cao hơn thì không truy cập được       

@@ -1,0 +1,2 @@
+- Công dụng: Để lưu trữ hàm và gọi lại khi dependency thay đổi
+- Cú pháp: const callBackU = useCallback(() => fns, [dependency])

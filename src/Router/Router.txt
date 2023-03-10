@@ -1,0 +1,12 @@
+- Thư viện: react-router-dom
+    + npm install react-router-dom
+    + yarn add react-router-dom
+- Công dụng: Định tuyến
+- Cú pháp:
+    + createBrowserRouter([
+        {
+            path: '/', (Đường dẫn)
+            element: <ABC /> (component),
+            ...
+        }
+    ], o): Tạo bộ định tuyến

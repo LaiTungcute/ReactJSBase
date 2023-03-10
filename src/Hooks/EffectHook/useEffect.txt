@@ -1,0 +1,27 @@
+1. Life cycle
+    + Mounting: Giai đoạn các element được thay đổi vào dom
+    + Updating: Giai đoạn được cập nhật các state hoặc props
+    + Unmounting: Giai đoạn các component được remove khỏi dom
+
+2. Side effect
+- Side effect là những hành động event có thể làm thay đổi DOM trong react components.
+- 2 loại side effect:
+    + Side effect có cleanUp: subscriptions, setTimeout, setInterval.
+    + Side effect ko cần cleanUp: gọi API, tương tác DOM.
+
+3. Ứng dụng của useEffect: Quản lý vòng đời của 1 component.
+4. Cú pháp: useEffect(callback, [dependency]);
+5. Các trường hợp của useEffect
+    + TH1: Không có dependency ==> Sẽ gọi useEffect sau mỗi lần render
+    + TH2: dependency rỗng ==> Sẽ chỉ gọi useEffect 1 lần render duy nhất
+    + TH3: Có dependency ==> sẽ gọi lại useEffect khi dependency thay đổi
+6. Các bước chạy của useEffect
+    + Mounting: 
+        render
+        chạy vào useEffect
+    + Updating
+        render
+        chạy useEffect cleanUp (nếu dependency thay đổi)
+        chạy vào useEffect (nếu dependency thay đổi)
+    + Unmounting
+        chạy useEffect cleanUp (nếu có)

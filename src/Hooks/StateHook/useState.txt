@@ -1,0 +1,2 @@
+- Cú pháp: const [a, setA] = useState(/*Giá trị khởi tạo*/);
+- Ứng dụng: Dùng để thay đổi state trong component

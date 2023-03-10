@@ -1,0 +1,11 @@
+- Lifecycle xem ở useEffect.txt trong thư mục Hooks/EffectHook
+
+- Mounting:
+    + contructor(): Phương thức khởi tạo các giá trị và kế thừa các props
+    + render(): Phương thức để render trên màn hình
+    + componentDidMount(): Phương thức dùng thay đổi các component vào DOM
+- Updating:
+    + componentDidUpdate(): Phương thức dùng để cập nhật các giá trị
+    + render()
+- Unmounting:
+    + componentWillUnmount(): Phương thức được gọi khi component bị gỡ khỏi DOM

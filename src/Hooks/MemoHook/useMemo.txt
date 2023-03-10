@@ -1,0 +1,2 @@
+- Công dụng: Lưu trữ giá trị và chỉ gọi khi dependency thay đổi
+- Cú pháp: const memmo = useMemo(() => function, [dependency]);
